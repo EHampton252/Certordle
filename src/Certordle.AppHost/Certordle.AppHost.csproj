@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Certordle.Server\Certordle.Server.csproj" />
+    <ProjectReference Include="..\Certordle.Api\Certordle.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>

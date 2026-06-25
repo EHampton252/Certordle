@@ -2,11 +2,11 @@
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.0.0
 MinimumVisualStudioVersion = 17.8.0.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Certordle.AppHost", "Certordle.AppHost\Certordle.AppHost.csproj", "{82BDB024-6380-4DE4-866F-D1D03D364B60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Certordle.AppHost", "src\Certordle.AppHost\Certordle.AppHost.csproj", "{82BDB024-6380-4DE4-866F-D1D03D364B60}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Certordle.Server", "Certordle.Server\Certordle.Server.csproj", "{50E902F7-D1DD-4EBC-97BD-82EB6242D0D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Certordle.Api", "src\Certordle.Api\Certordle.Api.csproj", "{50E902F7-D1DD-4EBC-97BD-82EB6242D0D5}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "frontend", "frontend\frontend.esproj", "{9411798C-EB79-4149-B3E7-15469C148A9A}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Certordle.Web", "src\Certordle.Web\Certordle.Web.esproj", "{9411798C-EB79-4149-B3E7-15469C148A9A}"
 EndProject
 
 Global
