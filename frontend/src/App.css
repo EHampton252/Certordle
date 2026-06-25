@@ -1,0 +1,278 @@
+:root {
+  --bg: #f6f4ef;
+  --panel: #fffdf8;
+  --panel-strong: #14342b;
+  --ink: #17211d;
+  --muted: #5d6a62;
+  --line: #ded7c8;
+  --accent: #0f766e;
+  --accent-strong: #0b5f59;
+  --warning: #9a3412;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+body {
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.10), transparent 42%),
+    linear-gradient(315deg, rgba(154, 52, 18, 0.10), transparent 40%),
+    var(--bg);
+  color: var(--ink);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(1120px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 48px 0;
+  display: grid;
+  align-items: center;
+}
+
+.challenge-panel {
+  display: grid;
+  gap: 24px;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-pill {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: rgba(255, 253, 248, 0.72);
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--panel-strong);
+  font-size: clamp(3rem, 12vw, 7.5rem);
+  line-height: 0.9;
+}
+
+.lede {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.meta-grid,
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.meta-grid > div,
+.prompt-card,
+.support-grid > div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.82);
+  box-shadow: 0 18px 48px rgba(23, 33, 29, 0.08);
+}
+
+.meta-grid > div {
+  padding: 16px;
+}
+
+.meta-grid span,
+.prompt-card span,
+.guess-form label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.meta-grid strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--panel-strong);
+  font-size: 1.1rem;
+}
+
+.prompt-card {
+  padding: 24px;
+}
+
+.prompt-card p {
+  max-width: 850px;
+  margin: 10px 0 0;
+  font-size: 1.45rem;
+  line-height: 1.35;
+}
+
+.guess-form {
+  display: grid;
+  gap: 8px;
+}
+
+.guess-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+.guess-row input {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.guess-row input:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgba(15, 118, 110, 0.18);
+}
+
+.guess-row button {
+  border: 0;
+  border-radius: 8px;
+  padding: 0 22px;
+  background: var(--accent);
+  color: white;
+  font-weight: 800;
+}
+
+.guess-row button:hover:not(:disabled) {
+  background: var(--accent-strong);
+}
+
+.guess-row button:disabled,
+.guess-row input:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.support-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.support-grid > div {
+  min-height: 180px;
+  padding: 20px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  color: var(--panel-strong);
+  font-size: 1rem;
+}
+
+.muted,
+.notice {
+  margin: 0;
+  color: var(--muted);
+}
+
+.notice {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: var(--panel);
+  font-weight: 700;
+}
+
+.notice.error {
+  border-color: rgba(154, 52, 18, 0.4);
+  color: var(--warning);
+}
+
+.guess-list,
+.hint-list {
+  margin: 0;
+  color: var(--muted);
+}
+
+.guess-list {
+  padding-left: 22px;
+}
+
+.guess-list li {
+  margin-top: 8px;
+}
+
+.hint-list {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.hint-list li {
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: rgba(15, 118, 110, 0.08);
+}
+
+.hint-list span {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    width: min(100% - 24px, 1120px);
+    padding: 28px 0;
+    align-items: start;
+  }
+
+  .brand-row,
+  .guess-row {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-row {
+    display: grid;
+  }
+
+  .meta-grid,
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guess-row button {
+    min-height: 48px;
+  }
+
+  .prompt-card p {
+    font-size: 1.2rem;
+  }
+}

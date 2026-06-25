@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "Certordle.AppHost/Certordle.AppHost.csproj"
+  }
+}
